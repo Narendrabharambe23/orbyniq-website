@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Solutions | ORBYNIQ</title>
+  <meta name="description" content="Explore Orbyniq's full engineering suite: Software Development, Artificial Intelligence & Machine Learning, IT Consulting, Web & Mobile, Automation, SaaS, and Digital Transformation.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#FF5500',
+              hover: '#E04B00',
+              light: '#FF7733',
+              glow: 'rgba(255, 85, 0, 0.25)',
+              subtle: 'rgba(255, 85, 0, 0.08)',
+            },
+            dark: {
+              900: '#07090E',
+              800: '#0E131F',
+              700: '#141B2D',
+              600: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#07090E] text-slate-100 min-h-screen selection:bg-brand selection:text-white relative">
+
+  <!-- Ambient Glow -->
+  <div class="glow-blob-orange top-0 right-1/4 opacity-30"></div>
+
+  <!-- Header -->
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 bg-[#07090E]/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center tracking-[0.16em] font-heading font-extrabold text-2xl group">
+        <span class="text-brand transition-transform group-hover:scale-110 duration-200">O</span>
+        <span class="text-white group-hover:text-slate-200 transition-colors">RBYNIQ</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+        <a href="services.html" class="text-brand font-semibold">Services</a>
+        <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
+        <a href="index.html#roi-calc" class="hover:text-brand transition-colors">ROI Calculator</a>
+        <a href="contact.html" class="hover:text-brand transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="theme-toggle-btn p-2 rounded-xl border border-white/10 hover:border-brand/50 text-slate-400 hover:text-white transition-all bg-white/5">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 text-brand"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4 hidden text-slate-800"></i>
+        </button>
+        <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-brand hover:bg-brand-hover text-white text-sm font-semibold shadow-lg shadow-brand/20 transition-all">
+          Start Project
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="pt-36 pb-16 bg-tech-grid border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+        Enterprise Capabilities
+      </span>
+      <h1 class="mt-4 font-heading text-4xl sm:text-6xl font-bold text-white tracking-tight">
+        Engineered for Scalability, Built for Intelligence
+      </h1>
+      <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">
+        A deep look at Orbyniq's 7 core technology pillars designed to turn complex business hurdles into automated competitive advantages.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detailed Service Pillars -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- 1. Software Development -->
+      <div id="software-dev" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="code-2" class="w-4 h-4"></i> Pillar 01
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">Software Development</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Modern enterprises require custom software that can handle millions of requests without degradation. We build robust, modular, and cloud-native software backends that scale gracefully as user volume surges.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Microservices & API Gateways</div>
+                <p class="text-xs text-slate-400">Decoupled services using gRPC, REST, and GraphQL for peak system resilience.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Database Architecture</div>
+                <p class="text-xs text-slate-400">Optimized relational, NoSQL, and vector storage engines with automated failover.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Key Technologies</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Python / FastAPI</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Node.js / TypeScript</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Go / Rust</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Docker & K8s</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">PostgreSQL & Redis</span>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Typical Sprint Cycle:</span>
+              <span class="text-brand font-semibold">2 Weeks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Artificial Intelligence & Machine Learning -->
+      <div id="ai-ml" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-brand/40 bg-gradient-to-r from-brand/5 via-transparent to-brand/5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="brain-circuit" class="w-4 h-4"></i> Pillar 02 (Core Specialization)
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">Artificial Intelligence & Machine Learning</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              AI shouldn't be a generic wrapper—it should solve tangible commercial friction. We engineer proprietary Retrieval-Augmented Generation (RAG) pipelines, domain-specific fine-tuned models, autonomous agents, and predictive decision engines.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Private Enterprise RAG</div>
+                <p class="text-xs text-slate-400">Empower employees with conversational AI over sensitive enterprise knowledge bases without data leakage.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Autonomous AI Agents</div>
+                <p class="text-xs text-slate-400">Multi-agent systems that research, synthesize, and execute complex workflows without manual supervision.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">AI Frameworks</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-brand/10 text-xs text-brand border border-brand/30">PyTorch</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">LangChain & LlamaIndex</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">OpenAI & Anthropic APIs</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Qdrant & Pinecone Vector DB</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">HuggingFace Transformers</span>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Accuracy Benchmark:</span>
+              <span class="text-brand font-semibold">&gt; 98.4% Contextual Recall</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. IT Consulting & Technology Solutions -->
+      <div id="consulting" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="lightbulb" class="w-4 h-4"></i> Pillar 03
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">IT Consulting & Technology Solutions</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Avoid costly architecture dead-ends. We advise leadership on tech investments, cloud migration blueprints, security posture, and high-ROI technical initiatives that align directly with shareholder value.
+            </p>
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand mt-1"></i>
+                <span><strong>Cloud & Infrastructure Modernization:</strong> Streamline AWS, Azure, or GCP footprints to slash compute overhead by up to 35%.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand mt-1"></i>
+                <span><strong>Security & Compliance Audits:</strong> Hardened security review protecting sensitive client records and IP.</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Consulting Focus</div>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>• Legacy Technical Debt Auditing</li>
+              <li>• System Architecture Design & RFP Spec</li>
+              <li>• Data Pipeline Strategy & Governance</li>
+              <li>• Fractional CTO & Lead Advisory</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Web & Application Development -->
+      <div id="web-apps" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="smartphone" class="w-4 h-4"></i> Pillar 04
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">Web & Application Development</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Create digital touchpoints that convert. We develop ultra-responsive modern web interfaces, customer portals, and native mobile apps with frictionless user flows and sub-second load times.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Modern React / Next.js</div>
+                <p class="text-xs text-slate-400">Server-side rendering, edge caching, and perfect Core Web Vitals score.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                <div class="font-semibold text-white mb-1">Mobile Experiences</div>
+                <p class="text-xs text-slate-400">iOS and Android apps with offline support, biometric security, and push flows.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Stack</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Next.js 14 / React</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Tailwind CSS</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">React Native / Flutter</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/10">Vercel & AWS Edge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Business Process Automation -->
+      <div id="automation" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="repeat" class="w-4 h-4"></i> Pillar 05
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">Business Process Automation</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Replace manual spreadsheets, repetitive data copying, and email chains with synchronized digital pipelines. We build automated connectors that bind your sales, finance, operations, and support channels into one unified engine.
+            </p>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Automated Capabilities</div>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>• Automated Invoice & PO Extraction</li>
+              <li>• Multi-App Webhooks & CRM Syncing</li>
+              <li>• Customer Onboarding Verification</li>
+              <li>• Real-Time Slack & Teams Alert Bots</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. SaaS & Product Development -->
+      <div id="saas-product" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="rocket" class="w-4 h-4"></i> Pillar 06
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">SaaS & Product Development</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Have a breakthrough software concept? We help founders and enterprises build subscription-ready software products from first sketch to launch. Includes multi-tenant databases, Stripe billing, auth, and analytics out of the box.
+            </p>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">SaaS Blueprint Inclusions</div>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>• Multi-Tenant Organization Isolation</li>
+              <li>• Automated Stripe Subscriptions & Metering</li>
+              <li>• Role-Based Access Control (RBAC)</li>
+              <li>• Comprehensive Audit Logs & Admin Console</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Digital Transformation -->
+      <div id="transformation" class="scroll-mt-28 glass-card rounded-3xl p-8 sm:p-12 border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i> Pillar 07
+            </div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-4">Digital Transformation</h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-6">
+              Transition established organizations into agile, digital-first innovators. We replace brittle on-prem legacy systems with modern cloud infrastructure, establish centralized data lakes, and train your staff on intelligent digital workflows.
+            </p>
+          </div>
+          <div class="lg:col-span-5 bg-dark-900/60 p-6 rounded-2xl border border-white/5">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Transformation Milestones</div>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>• Legacy Code Refactoring & Microservices</li>
+              <li>• Modern Cloud Migration with Zero Downtime</li>
+              <li>• Data Democratization & AI Readiness</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-dark-800 border-t border-white/5 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+        Ready to architect your solution?
+      </h2>
+      <p class="text-slate-300 text-base mb-8">
+        Schedule a discovery session with Orbyniq's technical leaders to explore how our core services can be tailored to your precise roadmap.
+      </p>
+      <a href="contact.html" class="px-8 py-4 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-base shadow-xl shadow-brand/30 transition-all inline-flex items-center gap-2">
+        <span>Book Strategy Session</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-[#05070A] py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-center tracking-[0.16em] font-heading font-extrabold text-xl mb-3">
+        <span class="text-brand">O</span>
+        <span class="text-white">RBYNIQ</span>
+      </div>
+      <p class="text-slate-400 mb-4">"Let's build what's next."</p>
+      <p>&copy; 2026 ORBYNIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

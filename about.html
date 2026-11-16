@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ORBYNIQ - Our Vision & Mission</title>
+  <meta name="description" content="Learn about ORBYNIQ - our vision, mission, and dedication to building scalable, reliable, and intelligent AI and software solutions.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#FF5500',
+              hover: '#E04B00',
+              light: '#FF7733',
+              glow: 'rgba(255, 85, 0, 0.25)',
+              subtle: 'rgba(255, 85, 0, 0.08)',
+            },
+            dark: {
+              900: '#07090E',
+              800: '#0E131F',
+              700: '#141B2D',
+              600: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#07090E] text-slate-100 min-h-screen selection:bg-brand selection:text-white relative">
+
+  <!-- Header -->
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 bg-[#07090E]/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center tracking-[0.16em] font-heading font-extrabold text-2xl group">
+        <span class="text-brand transition-transform group-hover:scale-110 duration-200">O</span>
+        <span class="text-white group-hover:text-slate-200 transition-colors">RBYNIQ</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+        <a href="services.html" class="hover:text-brand transition-colors">Services</a>
+        <a href="about.html" class="text-brand font-semibold">About Us</a>
+        <a href="index.html#roi-calc" class="hover:text-brand transition-colors">ROI Calculator</a>
+        <a href="contact.html" class="hover:text-brand transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="theme-toggle-btn p-2 rounded-xl border border-white/10 hover:border-brand/50 text-slate-400 hover:text-white transition-all bg-white/5">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 text-brand"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4 hidden text-slate-800"></i>
+        </button>
+        <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-brand hover:bg-brand-hover text-white text-sm font-semibold shadow-lg shadow-brand/20 transition-all">
+          Connect With Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="pt-36 pb-20 bg-tech-grid relative overflow-hidden border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+        About Orbyniq
+      </span>
+      <h1 class="mt-6 font-heading text-4xl sm:text-6xl font-bold text-white tracking-tight leading-tight">
+        Building the Next Generation of <span class="text-gradient-orange">Intelligent Software</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+        We are an emerging technology company driven by innovation, creativity, and an unrelenting passion for solving real-world challenges through technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story & Focus -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-6">
+            Our Purpose & Foundation
+          </h2>
+          <div class="space-y-4 text-base text-slate-300 leading-relaxed">
+            <p>
+              At <strong class="text-brand">ORBYNIQ</strong>, our focus is on delivering reliable, scalable, and intelligent technology solutions that help businesses grow, operate smarter, and adapt to the digital future.
+            </p>
+            <p>
+              We believe technology should create meaningful impact. By combining deep technical expertise, innovative engineering practices, and a customer-focused approach, we aim to turn complex ideas into practical, high-leverage digital products.
+            </p>
+            <p>
+              From custom AI and Machine Learning models to resilient enterprise architectures, our multidisciplinary team architects software that is built for today's demands and tomorrow's breakthroughs.
+            </p>
+          </div>
+          <div class="mt-8">
+            <div class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-brand font-heading font-bold text-base">
+              <span>Let's build what's next.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision and Mission Cards -->
+        <div class="space-y-6">
+          
+          <!-- Vision -->
+          <div class="glass-card rounded-3xl p-8 border-brand/30 bg-gradient-to-br from-brand/10 to-dark-800">
+            <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center mb-4">
+              <i data-lucide="eye" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">Our Vision</h3>
+            <p class="text-slate-300 text-base leading-relaxed italic">
+              "To become a trusted global technology company that builds impactful products, empowers businesses, and shapes the future through continuous innovation."
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div class="glass-card rounded-3xl p-8 border-white/10 bg-dark-800">
+            <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center mb-4">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">Our Mission</h3>
+            <p class="text-slate-300 text-base leading-relaxed italic">
+              "To make technology more accessible, intelligent, and valuable by developing solutions that address real-world needs."
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Core Pillars & Values -->
+  <section class="py-20 bg-dark-900 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+          Guiding Principles
+        </span>
+        <h2 class="mt-4 font-heading text-3xl sm:text-4xl font-bold text-white">
+          The Orbyniq Standard
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Reliability</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every line of code and AI prompt is tested against enterprise edge cases to ensure uninterrupted operations.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-4">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Scalability</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Architectures designed from day one to handle exponential traffic, data volumes, and expanding business logic.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Practical Intelligence</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            AI applied with direct business utility, avoiding empty hype in favor of measurable efficiency and revenue.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Customer Partnership</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            We act as an extension of your core executive team, prioritizing transparent communication and speed to market.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Connect on LinkedIn Callout -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="glass-card rounded-3xl p-10 border-brand/30 bg-gradient-to-b from-[#0A66C2]/10 to-transparent">
+        <div class="w-16 h-16 rounded-2xl bg-[#0A66C2]/20 border border-[#0A66C2]/40 text-[#0A66C2] flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="linkedin" class="w-8 h-8"></i>
+        </div>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mb-3">Join the Orbyniq Professional Community</h2>
+        <p class="text-sm text-slate-300 max-w-lg mx-auto mb-6">
+          Stay informed on our latest AI breakthroughs, case studies, company milestones, and industry perspectives.
+        </p>
+        <a href="https://www.linkedin.com/company/orbyniq" target="_blank" rel="noopener noreferrer" 
+           class="px-8 py-3.5 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white font-semibold text-sm shadow-lg shadow-[#0A66C2]/30 transition-all inline-flex items-center gap-2">
+          <span>Follow Orbyniq on LinkedIn</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-[#05070A] py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-center tracking-[0.16em] font-heading font-extrabold text-xl mb-3">
+        <span class="text-brand">O</span>
+        <span class="text-white">RBYNIQ</span>
+      </div>
+      <p class="text-slate-400 mb-4">"Let's build what's next."</p>
+      <p>&copy; 2026 ORBYNIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

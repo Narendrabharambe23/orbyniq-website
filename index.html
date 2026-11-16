@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBYNIQ | Intelligent AI Solutions & Enterprise Software Development</title>
+  <meta name="description" content="Orbyniq delivers reliable, scalable, and intelligent AI and software engineering solutions. From custom machine learning to full-stack SaaS and digital transformation. Let's build what's next.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#FF5500',
+              hover: '#E04B00',
+              light: '#FF7733',
+              glow: 'rgba(255, 85, 0, 0.25)',
+              subtle: 'rgba(255, 85, 0, 0.08)',
+            },
+            dark: {
+              900: '#07090E',
+              800: '#0E131F',
+              700: '#141B2D',
+              600: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#07090E] text-slate-100 min-h-screen selection:bg-brand selection:text-white relative">
+
+  <!-- Ambient Glow Behind Hero -->
+  <div class="glow-blob-orange top-0 left-1/2 -translate-x-1/2"></div>
+  <div class="glow-blob-orange top-[1200px] right-0 opacity-40"></div>
+  <div class="glow-blob-orange top-[2800px] left-0 opacity-30"></div>
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#07090E]/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <!-- SVG Sharp Brand Logo -->
+        <div class="flex items-center tracking-[0.16em] font-heading font-extrabold text-2xl">
+          <span class="text-brand transition-transform group-hover:scale-110 duration-200">O</span>
+          <span class="text-white dark:text-white light:text-slate-900 group-hover:text-slate-200 transition-colors">RBYNIQ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-brand transition-colors">Services</a>
+        <a href="#solutions" class="hover:text-brand transition-colors">AI & Innovations</a>
+        <a href="#roi-calc" class="hover:text-brand transition-colors">ROI Calculator</a>
+        <a href="#about" class="hover:text-brand transition-colors">About & Vision</a>
+        <a href="#process" class="hover:text-brand transition-colors">Our Process</a>
+        <a href="services.html" class="hover:text-brand transition-colors">All Capabilities</a>
+      </nav>
+
+      <!-- Action CTAs & Controls -->
+      <div class="hidden sm:flex items-center gap-4">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn p-2 rounded-xl border border-white/10 hover:border-brand/50 text-slate-400 hover:text-white transition-all bg-white/5" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 text-brand"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4 hidden text-slate-800"></i>
+        </button>
+
+        <!-- LinkedIn Shortcut -->
+        <a href="https://www.linkedin.com/company/orbyniq" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl border border-white/10 hover:border-[#0A66C2]/60 text-slate-400 hover:text-[#0A66C2] transition-all bg-white/5" title="Follow Orbyniq on LinkedIn">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Schedule CTA -->
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-brand hover:bg-brand-hover text-white text-sm font-semibold tracking-wide shadow-lg shadow-brand/20 hover:shadow-brand/40 transition-all flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuToggle" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#07090E]/95 backdrop-blur-xl hidden flex flex-col p-6">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center tracking-[0.16em] font-heading font-extrabold text-2xl">
+        <span class="text-brand">O</span>
+        <span class="text-white">RBYNIQ</span>
+      </div>
+      <button id="mobileMenuClose" class="p-2 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 py-8 text-lg font-medium text-slate-200">
+      <a href="#services" class="mobile-nav-link hover:text-brand">Core Services</a>
+      <a href="#solutions" class="mobile-nav-link hover:text-brand">AI Solutions</a>
+      <a href="#roi-calc" class="mobile-nav-link hover:text-brand">ROI Calculator</a>
+      <a href="#about" class="mobile-nav-link hover:text-brand">About Us & Vision</a>
+      <a href="#process" class="mobile-nav-link hover:text-brand">Engineering Process</a>
+      <a href="services.html" class="mobile-nav-link hover:text-brand">Detailed Services</a>
+      <a href="about.html" class="mobile-nav-link hover:text-brand">About Company</a>
+      <a href="contact.html" class="mobile-nav-link hover:text-brand">Contact Orbyniq</a>
+    </div>
+    <div class="mt-auto pt-6 border-t border-white/10 flex flex-col gap-3">
+      <a href="#contact" class="mobile-nav-link w-full py-3 rounded-xl bg-brand text-white font-semibold text-center shadow-lg shadow-brand/20">
+        Initiate Project Consultation
+      </a>
+      <div class="flex items-center justify-center gap-4 pt-2">
+        <button class="theme-toggle-btn px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm flex items-center gap-2 text-slate-300">
+          <i data-lucide="sun" class="w-4 h-4 text-brand"></i> Switch Theme
+        </button>
+        <a href="https://www.linkedin.com/company/orbyniq" target="_blank" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm flex items-center gap-2 text-slate-300">
+          <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-tech-grid">
+    <canvas id="heroCanvas"></canvas>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md shadow-inner">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand animate-pulse"></span>
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Next-Gen AI & Custom Software Engineering</span>
+        <span class="text-xs text-brand font-medium pl-1">| Accepting Enterprise Projects</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.12]">
+        Turning Visionary Ideas into 
+        <span class="text-gradient-orange">Scalable AI & Software</span> Realities.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+        We help businesses grow, operate smarter, and adapt to the digital future with reliable, 
+        enterprise-grade AI solutions, custom software engineering, and intelligent process automation.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-base shadow-xl shadow-brand/25 hover:shadow-brand/40 transition-all flex items-center justify-center gap-3 group">
+          <span>Schedule Discovery Call</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-200 font-semibold text-base transition-all flex items-center justify-center gap-2">
+          <span>Explore Services</span>
+          <i data-lucide="layers" class="w-5 h-5 text-brand"></i>
+        </a>
+        <a href="#roi-calc" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-dark-800/80 hover:bg-dark-700 border border-brand/30 text-brand font-semibold text-base transition-all flex items-center justify-center gap-2">
+          <i data-lucide="calculator" class="w-5 h-5"></i>
+          <span>Calculate AI ROI</span>
+        </a>
+      </div>
+
+      <!-- Tagline Callout -->
+      <div class="mt-12 text-sm font-medium text-slate-400 flex items-center justify-center gap-2">
+        <span class="text-brand font-bold uppercase tracking-widest text-xs">Motto</span>
+        <span class="text-slate-300 font-heading font-semibold text-base">"Let's build what's next."</span>
+      </div>
+
+      <!-- Trust Metric Badges -->
+      <div class="mt-16 stats-container grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        
+        <div class="glass-card rounded-2xl p-6 text-left relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-16 h-16 bg-brand/5 rounded-bl-3xl group-hover:bg-brand/10 transition-colors"></div>
+          <div class="text-3xl lg:text-4xl font-extrabold text-white font-heading counter-val" data-target="99.9" data-suffix="%" data-decimals="1">0.0%</div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-brand mt-1">Uptime & Reliability</div>
+          <p class="text-xs text-slate-400 mt-2">Engineered with high fault-tolerance & cloud resilience.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-left relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-16 h-16 bg-brand/5 rounded-bl-3xl group-hover:bg-brand/10 transition-colors"></div>
+          <div class="text-3xl lg:text-4xl font-extrabold text-white font-heading counter-val" data-target="45" data-suffix="%" data-prefix="+">0%</div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-brand mt-1">Operational Efficiency</div>
+          <p class="text-xs text-slate-400 mt-2">Achieved through custom AI workflows and automation.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-left relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-16 h-16 bg-brand/5 rounded-bl-3xl group-hover:bg-brand/10 transition-colors"></div>
+          <div class="text-3xl lg:text-4xl font-extrabold text-white font-heading counter-val" data-target="10" data-suffix="x">0x</div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-brand mt-1">Deployment Velocity</div>
+          <p class="text-xs text-slate-400 mt-2">Modern CI/CD, modular architecture, and rapid prototyping.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-left relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-16 h-16 bg-brand/5 rounded-bl-3xl group-hover:bg-brand/10 transition-colors"></div>
+          <div class="text-3xl lg:text-4xl font-extrabold text-white font-heading counter-val" data-target="100" data-suffix="%">0%</div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-brand mt-1">Customer-Centric Focus</div>
+          <p class="text-xs text-slate-400 mt-2">Bespoke solutions tuned to real commercial outcomes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TECH ECOSYSTEM MARQUEE
+       ======================================================================== -->
+  <section class="py-8 border-y border-white/5 bg-[#0A0E17]/60 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 mb-3 text-center">
+      <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Our Modern Engineering & AI Ecosystem</span>
+    </div>
+    <div class="relative w-full overflow-hidden">
+      <div class="animate-marquee flex items-center gap-12 whitespace-nowrap text-slate-400 text-sm font-semibold">
+        <span class="flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-brand"></i> OpenAI & Anthropic LLMs</span>
+        <span class="flex items-center gap-2"><i data-lucide="code" class="w-4 h-4 text-brand"></i> Python & FastAPI</span>
+        <span class="flex items-center gap-2"><i data-lucide="database" class="w-4 h-4 text-brand"></i> PyTorch & HuggingFace</span>
+        <span class="flex items-center gap-2"><i data-lucide="workflow" class="w-4 h-4 text-brand"></i> LangChain & LlamaIndex</span>
+        <span class="flex items-center gap-2"><i data-lucide="layout" class="w-4 h-4 text-brand"></i> React & Next.js 14</span>
+        <span class="flex items-center gap-2"><i data-lucide="server" class="w-4 h-4 text-brand"></i> Node.js & TypeScript</span>
+        <span class="flex items-center gap-2"><i data-lucide="cloud" class="w-4 h-4 text-brand"></i> AWS & Google Cloud</span>
+        <span class="flex items-center gap-2"><i data-lucide="box" class="w-4 h-4 text-brand"></i> Docker & Kubernetes</span>
+        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-brand"></i> PostgreSQL & Vector DBs</span>
+        <!-- Duplicate for infinite ticker -->
+        <span class="flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-brand"></i> OpenAI & Anthropic LLMs</span>
+        <span class="flex items-center gap-2"><i data-lucide="code" class="w-4 h-4 text-brand"></i> Python & FastAPI</span>
+        <span class="flex items-center gap-2"><i data-lucide="database" class="w-4 h-4 text-brand"></i> PyTorch & HuggingFace</span>
+        <span class="flex items-center gap-2"><i data-lucide="workflow" class="w-4 h-4 text-brand"></i> LangChain & LlamaIndex</span>
+        <span class="flex items-center gap-2"><i data-lucide="layout" class="w-4 h-4 text-brand"></i> React & Next.js 14</span>
+        <span class="flex items-center gap-2"><i data-lucide="server" class="w-4 h-4 text-brand"></i> Node.js & TypeScript</span>
+        <span class="flex items-center gap-2"><i data-lucide="cloud" class="w-4 h-4 text-brand"></i> AWS & Google Cloud</span>
+        <span class="flex items-center gap-2"><i data-lucide="box" class="w-4 h-4 text-brand"></i> Docker & Kubernetes</span>
+        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-brand"></i> PostgreSQL & Vector DBs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CORE SERVICES SECTION
+       ======================================================================== -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+          Core Capabilities
+        </span>
+        <h2 class="mt-4 font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+          Comprehensive Technology Services Tailored for Impact
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          From intelligent AI model integration to mission-critical software systems, we provide end-to-end execution that scales with your growth.
+        </p>
+      </div>
+
+      <!-- 7 Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Software Development -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="code-2" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              Software Development
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Full-lifecycle custom software engineered for high reliability, fault tolerance, and seamless cloud scaling. Custom backends, microservices, and enterprise logic.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Distributed & Microservice Architectures</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> High-Throughput REST & GraphQL APIs</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Cloud-Native Infrastructure & DevOps</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Enterprise Grade</span>
+            <a href="services.html#software-dev" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. AI & Machine Learning -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group border-brand/30 bg-gradient-to-b from-brand/5 to-transparent">
+          <div class="absolute -top-3 right-6 px-3 py-1 bg-brand text-white text-[10px] font-bold uppercase rounded-full tracking-wider shadow-md">
+            Flagship Specialization
+          </div>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/20 border border-brand/40 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="brain-circuit" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              Artificial Intelligence & ML
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Custom generative AI, retrieval-augmented generation (RAG), predictive analytics, and autonomous AI agents designed to unlock exponential intelligence.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Private Enterprise RAG & Vector Search</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Fine-Tuned Domain LLMs & Copilots</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Predictive Modeling & Anomaly Detection</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Generative & Predictive AI</span>
+            <a href="services.html#ai-ml" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 3. IT Consulting & Technology Solutions -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="lightbulb" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              IT Consulting & Solutions
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Strategic technology roadmaps, system audits, and architecture advisory to modernize your business technology stack while controlling total cost of ownership.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Technology Stack Optimization & Audits</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Cloud Migration & Infrastructure Strategy</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Security, Governance & Compliance Audits</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Strategic Advisory</span>
+            <a href="services.html#it-consulting" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 4. Web & Application Development -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="smartphone" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              Web & App Development
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Lightning-fast responsive web applications, progressive web apps (PWAs), and cross-platform mobile apps with pixel-perfect UX and robust backends.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> React, Next.js & Modern Frontend Stacks</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Cross-Platform Mobile Apps (iOS & Android)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> High-Speed SEO & Core Web Vitals Focus</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Cross-Platform Web & Mobile</span>
+            <a href="services.html#web-apps" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 5. Business Process Automation -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="repeat" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              Process Automation
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Eliminate redundant operational tasks and human bottlenecks. We design autonomous data pipelines, robotic process automations, and intelligent workflows.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Intelligent Document & Invoice Extraction</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> CRM & ERP System Synchronizations</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Automated Operations & Customer Alerts</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Streamlined Operations</span>
+            <a href="services.html#automation" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 6. SaaS & Product Development -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+              <i data-lucide="rocket" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+              SaaS & Product Development
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              From MVP ideation to commercial production SaaS. Multi-tenant database tenancy, subscription billing engines, user authentication, and high-velocity iterations.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Multi-Tenant SaaS Cloud Architectures</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Stripe / Payment Billing & Subscription Hubs</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand"></i> Rapid MVP Launches in Record Timelines</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-brand">
+            <span>Product Acceleration</span>
+            <a href="services.html#saas-product" class="flex items-center gap-1 hover:underline">Learn More <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- 7. Digital Transformation (Full Width or Centered) -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group lg:col-span-3 bg-gradient-to-r from-brand/5 via-dark-800 to-brand/5 border-brand/20">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div class="md:col-span-2">
+              <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+                <i data-lucide="refresh-cw" class="w-4 h-4"></i> Comprehensive Transformation
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-white mb-3 group-hover:text-brand transition-colors">
+                Digital Transformation
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Empowering legacy organizations to modernize brittle codebases, transition into data-driven powerhouses, and embed AI natively into everyday business operations.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row md:flex-col justify-center items-start md:items-end gap-3">
+              <a href="#contact" class="px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover text-white text-sm font-semibold transition-all shadow-md shadow-brand/20">
+                Request Transformation Audit
+              </a>
+              <span class="text-xs text-slate-400">Tailored assessments for enterprises & growing startups</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE AI ROI & SAVINGS CALCULATOR
+       ======================================================================== -->
+  <section id="roi-calc" class="py-24 relative bg-[#090D16] border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Context & Why Measure -->
+        <div class="lg:col-span-5">
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+            Interactive Business Tool
+          </span>
+          <h2 class="mt-4 font-heading text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Quantify Your Returns with Orbyniq AI & Automation
+          </h2>
+          <p class="mt-4 text-base text-slate-300 leading-relaxed">
+            Every repetitive task, manual report, and siloed workflow costs your enterprise valuable capital. Adjust the sliders to see what intelligent engineering can save your organization each year.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-brand/10 text-brand mt-1">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Rapid Payback Window</h4>
+                <p class="text-xs text-slate-400">Most Orbyniq custom AI workflows pay for themselves within 3 to 6 months.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-brand/10 text-brand mt-1">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Full IP & Data Sovereignty</h4>
+                <p class="text-xs text-slate-400">You retain 100% ownership of custom models, datasets, and codebase.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Calculator Card -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border-brand/30 shadow-2xl relative overflow-hidden bg-dark-800/90">
+            
+            <div class="flex items-center justify-between pb-6 border-b border-white/10">
+              <h3 class="font-heading font-bold text-xl text-white flex items-center gap-2">
+                <i data-lucide="calculator" class="w-5 h-5 text-brand"></i>
+                AI Impact & ROI Estimator
+              </h3>
+              <span class="text-xs text-slate-400">Real-time simulation</span>
+            </div>
+
+            <!-- Sliders Container -->
+            <div class="mt-6 space-y-6">
+              
+              <!-- Team Size Slider -->
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-2">
+                  <label for="calcTeamSize" class="text-slate-300">Team Members Impacted by Manual Processes</label>
+                  <span id="calcTeamSizeVal" class="text-brand font-bold text-base">12</span>
+                </div>
+                <input type="range" id="calcTeamSize" min="2" max="150" value="12" step="1" 
+                  class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand">
+                <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                  <span>2 team members</span>
+                  <span>150+ enterprise</span>
+                </div>
+              </div>
+
+              <!-- Hours per week -->
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-2">
+                  <label for="calcHours" class="text-slate-300">Repetitive / Manual Hours Per Employee / Week</label>
+                  <span id="calcHoursVal" class="text-brand font-bold text-base">15 hrs/week</span>
+                </div>
+                <input type="range" id="calcHours" min="3" max="30" value="15" step="1" 
+                  class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand">
+                <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                  <span>3 hrs (Light tasks)</span>
+                  <span>30 hrs (Heavy operational overhead)</span>
+                </div>
+              </div>
+
+              <!-- Hourly Rate -->
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-2">
+                  <label for="calcHourlyRate" class="text-slate-300">Average Hourly Employee Rate (USD)</label>
+                  <span id="calcHourlyRateVal" class="text-brand font-bold text-base">$45/hr</span>
+                </div>
+                <input type="range" id="calcHourlyRate" min="20" max="150" value="45" step="5" 
+                  class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand">
+              </div>
+
+              <!-- Automation Target Pct -->
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-2">
+                  <label for="calcAutomationPct" class="text-slate-300">Target Process Automation Percentage</label>
+                  <span id="calcAutomationPctVal" class="text-brand font-bold text-base">60%</span>
+                </div>
+                <input type="range" id="calcAutomationPct" min="20" max="90" value="60" step="5" 
+                  class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand">
+              </div>
+
+            </div>
+
+            <!-- Output Metric Display Box -->
+            <div class="mt-8 p-6 rounded-2xl bg-gradient-to-r from-brand/20 via-brand/10 to-transparent border border-brand/30">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                
+                <div>
+                  <div class="text-xs uppercase font-semibold text-slate-300">Estimated Annual Savings</div>
+                  <div id="calcAnnualSavings" class="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-1">$243,000</div>
+                  <span class="text-[10px] text-slate-400">Direct labor & ops recapture</span>
+                </div>
+
+                <div class="border-t sm:border-t-0 sm:border-l border-white/10 pt-3 sm:pt-0">
+                  <div class="text-xs uppercase font-semibold text-slate-300">Hours Reclaimed</div>
+                  <div id="calcHoursSaved" class="text-2xl sm:text-3xl font-heading font-extrabold text-brand mt-1">5,400 hrs</div>
+                  <span class="text-[10px] text-slate-400">Reinvested in high-value work</span>
+                </div>
+
+                <div class="border-t sm:border-t-0 sm:border-l border-white/10 pt-3 sm:pt-0">
+                  <div class="text-xs uppercase font-semibold text-slate-300">Projected Multiplier</div>
+                  <div id="calcRoiMultiplier" class="text-2xl sm:text-3xl font-heading font-extrabold text-emerald-400 mt-1">4.5x ROI</div>
+                  <span class="text-[10px] text-slate-400">First-year return on investment</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Call to action from calculator -->
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span class="text-xs text-slate-400">Want an exact engineering breakdown for your stack?</span>
+              <a href="#contact" class="px-5 py-2.5 rounded-xl bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider transition-all">
+                Lock In Free Strategy Call
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT, VISION & MISSION SECTION
+       ======================================================================== -->
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Story Card -->
+      <div class="glass-card rounded-3xl p-8 sm:p-14 border-white/10 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7">
+            <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+              Who We Are
+            </span>
+            <h2 class="mt-4 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Driven by innovation, creativity, and a passion for solving real-world challenges.
+            </h2>
+            
+            <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              We are an emerging technology company focused on delivering reliable, scalable, and intelligent technology solutions that help businesses grow, operate smarter, and adapt to the digital future.
+            </p>
+            <p class="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed">
+              We believe technology should create meaningful impact. By combining deep technical expertise, innovative thinking, and a customer-focused approach, we aim to turn ideas into practical, high-performing solutions.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <div class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand"></i> Reliable Architecture
+              </div>
+              <div class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand"></i> Scalable Cloud Infrastructure
+              </div>
+              <div class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand"></i> Customer-First Execution
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual Logo & Brand Statement Card -->
+          <div class="lg:col-span-5 flex flex-col justify-center">
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#07090E] border border-brand/30 shadow-2xl relative group">
+              
+              <div class="mb-6 flex justify-center">
+                <!-- Clean Brand Typography Display -->
+                <div class="flex items-center tracking-[0.2em] font-heading font-extrabold text-3xl">
+                  <span class="text-brand">O</span>
+                  <span class="text-white">RBYNIQ</span>
+                </div>
+              </div>
+
+              <!-- Vision Card -->
+              <div class="p-5 rounded-xl bg-white/5 border border-white/10 mb-4">
+                <div class="flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-wider mb-2">
+                  <i data-lucide="eye" class="w-4 h-4"></i> Our Vision
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+                  "To become a trusted global technology company that builds impactful products, empowers businesses, and shapes the future through continuous innovation."
+                </p>
+              </div>
+
+              <!-- Mission Card -->
+              <div class="p-5 rounded-xl bg-white/5 border border-white/10 mb-6">
+                <div class="flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-wider mb-2">
+                  <i data-lucide="target" class="w-4 h-4"></i> Our Mission
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+                  "To make technology more accessible, intelligent, and valuable by developing solutions that address real-world needs."
+                </p>
+              </div>
+
+              <!-- Brand Tagline Banner -->
+              <div class="py-3 px-4 rounded-xl bg-brand text-white text-center font-heading font-bold text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
+                <span>Let's build what's next.</span>
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4-STEP ENGINEERING & DELIVERY LIFECYCLE
+       ======================================================================== -->
+  <section id="process" class="py-24 relative bg-[#090D16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+          How We Work
+        </span>
+        <h2 class="mt-4 font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+          A Precision-Engineered Agile Delivery Model
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          We combine transparent communication, rapid sprint cycles, and automated testing to take your solution from whiteboard to production without frictional delays.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="glass-card rounded-2xl p-6 relative group">
+          <div class="text-4xl font-heading font-extrabold text-brand/30 group-hover:text-brand transition-colors mb-4">01</div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Discovery & Strategic Scope</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            We analyze your workflows, business bottlenecks, user personas, and technical requirements to define an actionable project roadmap with clear ROI metrics.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 text-[11px] text-brand font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-3 h-3"></i> Architecture Blueprint
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card rounded-2xl p-6 relative group">
+          <div class="text-4xl font-heading font-extrabold text-brand/30 group-hover:text-brand transition-colors mb-4">02</div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">AI & System Architecture</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            We design secure database schemas, API contracts, model selection pipelines (LLM / RAG / ML), and cloud topologies tuned for low latency and high scalability.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 text-[11px] text-brand font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-3 h-3"></i> Tech Stack Finalization
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card rounded-2xl p-6 relative group">
+          <div class="text-4xl font-heading font-extrabold text-brand/30 group-hover:text-brand transition-colors mb-4">03</div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Rapid Agile Development</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Bi-weekly iterative sprints with working demo deployments. Continuous code reviews, automated CI/CD unit testing, and customer feedback loops.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 text-[11px] text-brand font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-3 h-3"></i> Interactive Demos
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card rounded-2xl p-6 relative group">
+          <div class="text-4xl font-heading font-extrabold text-brand/30 group-hover:text-brand transition-colors mb-4">04</div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Production Launch & Scale</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Zero-downtime production cutover, automated observability, log monitoring, user training, and continuous optimization as your commercial volume multiplies.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 text-[11px] text-brand font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-3 h-3"></i> 24/7 SLA & Optimization
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT & PROJECT RFP SECTION
+       ======================================================================== -->
+  <section id="contact" class="py-24 relative overflow-hidden bg-tech-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Contact Details & LinkedIn Callout -->
+        <div class="lg:col-span-5">
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20">
+            Start A Conversation
+          </span>
+          <h2 class="mt-4 font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+            Ready to Build What's Next?
+          </h2>
+          <p class="mt-4 text-base text-slate-300 leading-relaxed">
+            Whether you have an upcoming software project, want to explore custom AI integrations, or need an end-to-end technology partner, our team is ready to assist.
+          </p>
+
+          <!-- Contact items -->
+          <div class="mt-8 space-y-4">
+            
+            <a href="https://www.linkedin.com/company/orbyniq" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#0A66C2]/60 transition-all flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-[#0A66C2]/10 border border-[#0A66C2]/30 flex items-center justify-center text-[#0A66C2] group-hover:scale-110 transition-transform">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Official Company Profile</div>
+                <div class="text-sm font-bold text-white group-hover:text-[#0A66C2] transition-colors flex items-center gap-1">
+                  linkedin.com/company/orbyniq <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </div>
+              </div>
+            </a>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/30 flex items-center justify-center text-brand">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Direct Inquiries</div>
+                <div class="text-sm font-bold text-white">contact@orbyniq.com</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/30 flex items-center justify-center text-brand">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Guaranteed Response Time</div>
+                <div class="text-sm font-bold text-white">Within 24 Hours on Business Days</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-8 sm:p-10 border-brand/20 bg-dark-800/90 shadow-2xl">
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">Project Discovery & Scope Submission</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">Fill out the form below to receive a customized technical proposal and consultation.</p>
+
+            <form id="orbyniqContactForm" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Your Name *</label>
+                  <input type="text" required placeholder="Alex Turner" class="custom-input w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Business Email *</label>
+                  <input type="email" required placeholder="alex@company.com" class="custom-input w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Company / Organization</label>
+                  <input type="text" placeholder="Acme Technologies" class="custom-input w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Primary Service of Interest *</label>
+                  <select required class="custom-input w-full px-4 py-3 rounded-xl text-sm">
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="software">Software Development</option>
+                    <option value="ai-ml">Artificial Intelligence & ML</option>
+                    <option value="consulting">IT Consulting & Technology Solutions</option>
+                    <option value="web-app">Web & Application Development</option>
+                    <option value="automation">Business Process Automation</option>
+                    <option value="saas">SaaS & Product Development</option>
+                    <option value="transformation">Digital Transformation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Estimated Budget (Optional)</label>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  <label class="cursor-pointer border border-white/10 rounded-xl p-2.5 text-center text-xs text-slate-300 hover:border-brand flex items-center justify-center">
+                    <input type="radio" name="budget" value="10k-25k" class="mr-1.5 accent-brand"> $10k - $25k
+                  </label>
+                  <label class="cursor-pointer border border-white/10 rounded-xl p-2.5 text-center text-xs text-slate-300 hover:border-brand flex items-center justify-center">
+                    <input type="radio" name="budget" value="25k-50k" class="mr-1.5 accent-brand"> $25k - $50k
+                  </label>
+                  <label class="cursor-pointer border border-white/10 rounded-xl p-2.5 text-center text-xs text-slate-300 hover:border-brand flex items-center justify-center">
+                    <input type="radio" name="budget" value="50k-100k" class="mr-1.5 accent-brand"> $50k - $100k
+                  </label>
+                  <label class="cursor-pointer border border-white/10 rounded-xl p-2.5 text-center text-xs text-slate-300 hover:border-brand flex items-center justify-center">
+                    <input type="radio" name="budget" value="100k+" class="mr-1.5 accent-brand"> $100k+
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Project Overview & Objectives *</label>
+                <textarea rows="4" required placeholder="Tell us about what you want to build, current challenges, and desired launch timeline..." class="custom-input w-full px-4 py-3 rounded-xl text-sm"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-base shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all flex items-center justify-center gap-2">
+                <span>Submit Project Scope</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+
+              <p class="text-[11px] text-center text-slate-500">
+                Non-disclosure protected. We respect your confidentiality and data privacy.
+              </p>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SUCCESS MODAL
+       ======================================================================== -->
+  <div id="successModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-8 border-brand text-center relative bg-dark-800 shadow-2xl">
+      <div class="w-16 h-16 rounded-2xl bg-brand/20 border border-brand/40 text-brand flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-heading font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+      <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+        Thank you for contacting <strong class="text-brand">ORBYNIQ</strong>. Our engineering leads will review your requirements and reach out within 24 hours to schedule your strategy consultation.
+      </p>
+      <button id="closeModalBtn" class="w-full py-3 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-sm transition-all">
+        Back to Website
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="border-t border-white/5 bg-[#05070A] py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5">
+        
+        <!-- Brand column -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center tracking-[0.16em] font-heading font-extrabold text-2xl mb-4">
+            <span class="text-brand">O</span>
+            <span class="text-white">RBYNIQ</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm leading-relaxed mb-6">
+            Delivering reliable, scalable, and intelligent technology solutions that help businesses grow, operate smarter, and adapt to the digital future.
+          </p>
+          <div class="text-xs font-semibold uppercase text-brand tracking-wider font-heading">
+            "Let's build what's next."
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Navigation</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+            <li><a href="services.html" class="hover:text-brand transition-colors">All Services</a></li>
+            <li><a href="about.html" class="hover:text-brand transition-colors">About Orbyniq</a></li>
+            <li><a href="#roi-calc" class="hover:text-brand transition-colors">ROI Calculator</a></li>
+            <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Core Services</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="services.html#software-dev" class="hover:text-brand transition-colors">Software Development</a></li>
+            <li><a href="services.html#ai-ml" class="hover:text-brand transition-colors">AI & Machine Learning</a></li>
+            <li><a href="services.html#consulting" class="hover:text-brand transition-colors">IT Consulting</a></li>
+            <li><a href="services.html#web-apps" class="hover:text-brand transition-colors">Web & Applications</a></li>
+            <li><a href="services.html#automation" class="hover:text-brand transition-colors">Process Automation</a></li>
+            <li><a href="services.html#saas-product" class="hover:text-brand transition-colors">SaaS Development</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Connect -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Connect With Us</h4>
+          <p class="text-xs text-slate-400 mb-4">Follow our journey, tech articles, and business updates:</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/orbyniq" target="_blank" rel="noopener noreferrer" 
+               class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-[#0A66C2] hover:text-[#0A66C2] flex items-center justify-center text-slate-300 transition-all" title="LinkedIn">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="mailto:contact@orbyniq.com" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-brand hover:text-brand flex items-center justify-center text-slate-300 transition-all" title="Email">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-white hover:text-white flex items-center justify-center text-slate-300 transition-all" title="GitHub">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; <span id="year">2026</span> ORBYNIQ. All rights reserved.
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400">Security</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
